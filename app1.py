@@ -28,7 +28,7 @@ def vector_embedding():
             with st.spinner('Embedding documents...'):
                 # Initialize session state variables
                 st.session_state.embeddings = NVIDIAEmbeddings()
-                st.session_state.loader = PyPDFDirectoryLoader("./us_census")  # Data Ingestion
+                #st.session_state.loader = PyPDFDirectoryLoader("./us_census")  # Data Ingestion
                 st.session_state.docs = st.session_state.loader.load()  # Document Loading
                 st.session_state.text_splitter = RecursiveCharacterTextSplitter(
                     chunk_size=700, chunk_overlap=50)  # Chunk Creation
